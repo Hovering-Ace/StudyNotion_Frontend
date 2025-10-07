@@ -1,7 +1,7 @@
 import React from "react"
 import { Link } from "react-router-dom";
 import { FaArrowRight } from "react-icons/fa";
-import HighlightText from "../components/core/homePage/HighlightText"
+//import HighlightText from "../components/core/homePage/HighlightText"
 import Button from "../components/core/homePage/Button"
 import Banner from "../assets/Images/banner.mp4"
 import CodeBlocks from "../components/core/homePage/CodeBlocks"
@@ -11,6 +11,15 @@ import ReviewSlider from "../components/common/ReviewSlider"
 import InstructerSection from "../components/core/homePage/InstructerSection"
 import Footer from "../components/common/Footer";
 import ExploreMore from "../components/core/homePage/ExploreMore";
+import { TypeAnimation } from "react-type-animation";
+
+const HighlightText = ({ text }) => {
+  return (
+    <span className="bg-gradient-to-r from-blue-400 to-teal-400 bg-clip-text text-transparent font-bold">
+      {text}
+    </span>
+  );
+};
 
 const Home = () => {
     return (
@@ -29,9 +38,20 @@ const Home = () => {
                 </Link>
 
                 {/* Heading */}
-                <div className="text-center text-4xl font-semibold">
-                    Empower Your Future with
-                    <HighlightText text={"Coding Skills"} />
+                <div className="text-center text-4xl bg-gradient-to-b from-[#1FA2FF] via-[#12D8FA] to-[#A6FFCB] text-transparent bg-clip-text font-bold lg:text-5xl">
+                    Empower Your Future with{" "}
+                    <TypeAnimation
+                        sequence={[
+                            "NextGen AI-powered features!", 2000,
+                            "Coding Skills!", 2000,
+                            "Job-ready courses!", 2000,
+                        ]}
+                        wrapper="span"
+                        cursor={true}
+                        repeat={Infinity}
+                        style={{ display: "inline-block" }}
+                        render={(text) => <HighlightText text={text} />}
+                    />
                 </div>
 
                 {/* Sub Heading */}

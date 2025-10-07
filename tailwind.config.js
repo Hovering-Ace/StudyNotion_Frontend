@@ -11,6 +11,11 @@ module.exports = {
       white: "#fff",
       black: "#000",
       transparent: "#ffffff00",
+      red: { // Define a custom red with shades
+              DEFAULT: '#E81646',
+              light: '#FA395C',
+              dark: '#C40C3B',
+            },
       richblack: {
         5: "#F1F2FF",
         25: "#DBDDEA",

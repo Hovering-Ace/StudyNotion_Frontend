@@ -29,7 +29,8 @@ import Catalog from "./pages/Catalog";
 import CourseDetails from "./pages/CourseDetails";
 import ViewCourse from "./pages/ViewCourse"
 import VideoDetails from "./components/core/ViewCourse/VideoDetails"
-
+import Career from "./components/core/Dashboard/Career"
+import Downloader from "./components/core/Dashboard/Career/Download";
 
 function App() {
 
@@ -123,6 +124,8 @@ function App() {
             <>
               <Route path="dashboard/enrolled-courses" element={<EnrolledCourses />} />
               <Route path="dashboard/cart" element={<Cart />} />
+              <Route path="dashboard/career" element={<Career />} />
+              <Route path="dashboard/career/download" element={<Downloader/>} />
             </>
           )}
 
